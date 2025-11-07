@@ -49,10 +49,10 @@ void main() {
     });
     studentIds.add(id);
 
-    print("✅ Student record added!\n");
+    print("Student record added!\n");
   }
 
-  print("\n===== Student Summary =====");
+  print("\nStudent Summary");
   if (students.isEmpty) {
     print("No records found!");
     return;
@@ -60,13 +60,13 @@ void main() {
 
   students.sort((a, b) => b['averageValue'].compareTo(a['averageValue']));
 
-  print("\n📋 Sorted Student List (High → Low):");
+  print("\nSorted Student List (High → Low):");
   for (var s in students) {
     print(
         "Name: ${s['name']}, ID: ${s['id']}, Final Grade: ${s['finalGrade']} (${s['averageValue'].toStringAsFixed(2)})");
   }
 
-  print("\n👨‍🎓 Total Students: ${students.length}");
+  print("\nTotal Students: ${students.length}");
 
   double highest = students.first['averageValue'];
   double lowest = students.last['averageValue'];
